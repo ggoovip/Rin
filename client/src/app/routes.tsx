@@ -150,14 +150,15 @@ function AppRoute({
   const siteConfig = useSiteConfig();
   const { t } = useTranslation();
 
-  // --- 首页 SEO 标题“优雅锁死”逻辑 ---
+  // --- 首页 SEO 标题动态锁定逻辑 ---
   useLayoutEffect(() => {
-    // 读取 index.html 中定义的全局变量，如果没有定义则给个兜底值
-    const SEO_TITLE = (window as any).SITE_SEO_TITLE || "Web3村长";
+    // 从 window 中读取 index.html 定义好的标题
+    const targetTitle = (window as any).SEO_TITLE;
 
-    if (path === "/" || window.location.pathname === "/") {
-      if (document.title !== SEO_TITLE) {
-        document.title = SEO_TITLE;
+    // 只有在首页路径，且全局标题存在时才执行锁定
+    if ((path === "/" || window.location.pathname === "/") && targetTitle) {
+      if (document.title !== targetTitle) {
+        document.title = targetTitle;
       }
     }
   }, [path]); 
