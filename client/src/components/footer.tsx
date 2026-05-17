@@ -102,7 +102,7 @@ function Footer() {
                             setDoubleClickTimes(doubleClickTimes + 1)
                         }
                     }}>
-                        © {new Date().getFullYear()} 🤠潇洒科技🤠 <a className='hover:underline' href="https://rinblog.ppoo.de5.net/" target="_blank" rel="noopener">🤠潇洒科技🤠</a>
+                        © {new Date().getFullYear()} 🤠潇洒科技🤠 <a className='hover:underline' href="https://rinblog.ppoo.de5.net/" target="_blank" rel="noopener">♻️科技改变生活♻️</a>
                     </span>
                     {config.getBoolean('rss') && <>
                         <Spliter />
