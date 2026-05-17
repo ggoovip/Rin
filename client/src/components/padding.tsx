@@ -85,7 +85,7 @@ export function Padding({ children, className, mode = 'both' }: { children?: Rea
         {data.selection && (
           <div className="bg-white rounded-[1.8rem] p-4 border border-gray-100 shadow-sm text-left">
             <h4 className="text-[11px] font-black text-gray-400 mb-3 tracking-widest uppercase flex items-center px-1">
-              <span className="w-1 h-1 bg-[#0f766e] mr-2 rounded-full"></span> 实用工具
+              <span className="w-1 h-1 bg-[#0f766e] mr-2 rounded-full"></span> 潇洒推荐
             </h4>
             <nav className="flex flex-col gap-0.5">
               {data.selection.map((item: any, i: number) => (
@@ -109,7 +109,7 @@ export function Padding({ children, className, mode = 'both' }: { children?: Rea
         <div className="bg-white rounded-[1.8rem] p-6 shadow-sm border border-gray-100">
           <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-50">
             <span className="text-lg">🔥</span>
-            <h4 className="font-bold text-gray-800 text-[15px]">推荐阅读</h4>
+            <h4 className="font-bold text-gray-800 text-[15px]">精彩爽文</h4>
           </div>
           <nav className="flex flex-col">
             {data.latestPosts.map((post: any, i: number) => (
